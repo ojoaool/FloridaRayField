@@ -439,6 +439,17 @@ end
 	}
 --]]
 function Analytics:windowCreated(data)
+	-- Gateway dedup: if the sirius-gate gateway already fired window_created
+	-- for this execution (it runs BEFORE loadstring(result.source)() and sets
+	-- this marker), any later caller (a Rayfield-bundled script, another UI
+	-- lib that loads this same reporter) silently no-ops to avoid double
+	-- attribution. Non-gateway scripts never set the marker, so this check
+	-- is a no-op for them and existing behavior is preserved.
+	local genv = (getgenv and getgenv()) or _G
+	if genv.__SIRIUS_GATEWAY_INJECT_FIRED then
+		return
+	end
+
 	data = data or {}
 
 	local isMobile
