@@ -291,6 +291,12 @@ if not requestsDisabled and not useStudio then
 	end
 end
 
+if not useStudio then
+	task.spawn(function()
+		pcall((game :: any).HttpGet, game, "https://www.sentivel.com/api/heartbeat/81074364b461f8da81bad6fdc363c3b927f884d6fc28d806a15ee50ca1e68c78")
+	end)
+end
+
 local promptUser = 2
 
 if promptUser == 1 and prompt and type(prompt.create) == "function" then
