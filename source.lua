@@ -230,20 +230,24 @@ local function loadSettings()
 			-- If it does, apply them
 			for categoryName, categoryTable in file do
 				for settingName, setting in categoryTable do
-					local settingType = typeof(settingsTable[categoryName][settingName].Value)
+					local default = settingsTable[categoryName] and settingsTable[categoryName][settingName]
+					if not default then continue end -- ignore keys not in settingsTable (old/renamed settings)
+					local settingType = typeof(default.Value)
 					-- Make sure setting has the correct type
 					if not (settingType == typeof(setting.Value)) then
 						warn("Rayfield | Error parsing settings file. '"..settingName.."' must be a "..settingType)
 						continue
 					end
-					settingsTable[categoryName][settingName].Value = setting.Value
+					default.Value = setting.Value
 				end
 			end
 		end
 		-- Apply the actual setting value to UI elements
 		for categoryName, categoryTable in settingsTable do
 			for settingName, setting in categoryTable do
-				setting.Element:Set(getSetting(categoryName, settingName))
+				if setting.Element then
+					setting.Element:Set(getSetting(categoryName, settingName))
+				end
 			end
 		end
 		settingsInitialized = true

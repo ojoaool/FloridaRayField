@@ -13,7 +13,7 @@ local HttpService = getService("HttpService")
 -- scope binding `_getgenv` — bare `_getgenv()` calls would resolve to nil and
 -- the pcall would swallow the failure, silently zeroing secureMode + customAssetId
 -- on every gateway-injected event. source.lua does the same capture at its top.
-local _getgenv = rawget(_G, "getgenv")
+local _getgenv = getgenv or rawget(_G, "getgenv")
 
 -- ── SHA-256 (pure Luau) — privacy-focused one-way hash of UserId ─────────────
 -- Produces a 64-char hex digest. The server re-hashes this with a secret key
