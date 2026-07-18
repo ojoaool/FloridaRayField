@@ -1752,7 +1752,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 	if Settings.Icon and Settings.Icon ~= 0 and Topbar:FindFirstChild('Icon') then
 		Topbar.Icon.Visible = true
-		Topbar.Title.Position = UDim2.new(0,5, 0, 0.5, 0)
+		Topbar.Title.Position = UDim2.new(0,5,  0.5,)
 		Topbar.Title.AnchorPoint = Vector2.new(0.5, 0.5)
 
 		if Settings.Icon then
