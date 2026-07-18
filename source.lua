@@ -364,46 +364,47 @@ local RayfieldLibrary = {
 			PlaceholderColor = Color3.fromRGB(178, 178, 178)
 		},
 
-		Ocean = {
-			TextColor = Color3.fromRGB(230, 240, 240),
+		GrapeGlow = {
+    TextColor = Color3.fromRGB(240, 235, 255),
 
-			Background = Color3.fromRGB(20, 30, 30),
-			Topbar = Color3.fromRGB(25, 40, 40),
-			Shadow = Color3.fromRGB(15, 20, 20),
+    Background = Color3.fromRGB(35, 24, 74),
+    Topbar = Color3.fromRGB(46, 32, 92),
+    Shadow = Color3.fromRGB(20, 14, 45),
 
-			NotificationBackground = Color3.fromRGB(25, 35, 35),
-			NotificationActionsBackground = Color3.fromRGB(230, 240, 240),
+    NotificationBackground = Color3.fromRGB(40, 28, 84),
+    NotificationActionsBackground = Color3.fromRGB(240, 235, 255),
 
-			TabBackground = Color3.fromRGB(40, 60, 60),
-			TabStroke = Color3.fromRGB(50, 70, 70),
-			TabBackgroundSelected = Color3.fromRGB(100, 180, 180),
-			TabTextColor = Color3.fromRGB(210, 230, 230),
-			SelectedTabTextColor = Color3.fromRGB(20, 50, 50),
+    TabBackground = Color3.fromRGB(52, 38, 102),
+    TabStroke = Color3.fromRGB(70, 52, 130),
+    TabBackgroundSelected = Color3.fromRGB(124, 77, 220),
+    TabTextColor = Color3.fromRGB(200, 190, 235),
+    SelectedTabTextColor = Color3.fromRGB(255, 255, 255),
 
-			ElementBackground = Color3.fromRGB(30, 50, 50),
-			ElementBackgroundHover = Color3.fromRGB(40, 60, 60),
-			SecondaryElementBackground = Color3.fromRGB(30, 45, 45),
-			ElementStroke = Color3.fromRGB(45, 70, 70),
-			SecondaryElementStroke = Color3.fromRGB(40, 65, 65),
+    ElementBackground = Color3.fromRGB(44, 31, 88),
+    ElementBackgroundHover = Color3.fromRGB(54, 39, 105),
+    SecondaryElementBackground = Color3.fromRGB(40, 28, 80),
+    ElementStroke = Color3.fromRGB(68, 50, 125),
+    SecondaryElementStroke = Color3.fromRGB(60, 44, 112),
 
-			SliderBackground = Color3.fromRGB(0, 110, 110),
-			SliderProgress = Color3.fromRGB(0, 140, 140),
-			SliderStroke = Color3.fromRGB(0, 160, 160),
+    SliderBackground = Color3.fromRGB(140, 90, 235),
+    SliderProgress = Color3.fromRGB(160, 110, 255),
+    SliderStroke = Color3.fromRGB(185, 140, 255),
 
-			ToggleBackground = Color3.fromRGB(30, 50, 50),
-			ToggleEnabled = Color3.fromRGB(0, 130, 130),
-			ToggleDisabled = Color3.fromRGB(70, 90, 90),
-			ToggleEnabledStroke = Color3.fromRGB(0, 160, 160),
-			ToggleDisabledStroke = Color3.fromRGB(85, 105, 105),
-			ToggleEnabledOuterStroke = Color3.fromRGB(50, 100, 100),
-			ToggleDisabledOuterStroke = Color3.fromRGB(45, 65, 65),
+    ToggleBackground = Color3.fromRGB(44, 31, 88),
+    ToggleEnabled = Color3.fromRGB(150, 95, 240),
+    ToggleDisabled = Color3.fromRGB(90, 78, 130),
+    ToggleEnabledStroke = Color3.fromRGB(180, 130, 255),
+    ToggleDisabledStroke = Color3.fromRGB(110, 98, 150),
+    ToggleEnabledOuterStroke = Color3.fromRGB(110, 70, 190),
+    ToggleDisabledOuterStroke = Color3.fromRGB(75, 65, 110),
 
-			DropdownSelected = Color3.fromRGB(30, 60, 60),
-			DropdownUnselected = Color3.fromRGB(25, 40, 40),
+    DropdownSelected = Color3.fromRGB(54, 39, 105),
+    DropdownUnselected = Color3.fromRGB(40, 28, 80),
 
-			InputBackground = Color3.fromRGB(30, 50, 50),
-			InputStroke = Color3.fromRGB(50, 70, 70),
-			PlaceholderColor = Color3.fromRGB(140, 160, 160)
+    InputBackground = Color3.fromRGB(44, 31, 88),
+    InputStroke = Color3.fromRGB(80, 58, 145),
+    PlaceholderColor = Color3.fromRGB(175, 160, 210)
+},
 		},
 
 		AmberGlow = {
@@ -698,51 +699,6 @@ local RayfieldLibrary = {
 			InputStroke = Color3.fromRGB(180, 190, 200),
 			PlaceholderColor = Color3.fromRGB(150, 150, 150)
 		},
-
-		-- ═══════════════════════════════════════════════════
--- TEMA CPO 3.0 NEON - Adicione isso na tabela Theme
--- ═══════════════════════════════════════════════════
-CPO3 = {
-    TextColor = Color3.fromRGB(240, 245, 255),
-
-    Background = Color3.fromRGB(12, 18, 50),
-    Topbar = Color3.fromRGB(8, 14, 40),
-    Shadow = Color3.fromRGB(5, 10, 30),
-
-    NotificationBackground = Color3.fromRGB(15, 22, 60),
-    NotificationActionsBackground = Color3.fromRGB(25, 35, 80),
-
-    TabBackground = Color3.fromRGB(20, 30, 80),
-    TabStroke = Color3.fromRGB(0, 200, 255),
-    TabBackgroundSelected = Color3.fromRGB(30, 50, 120),
-    TabTextColor = Color3.fromRGB(180, 200, 255),
-    SelectedTabTextColor = Color3.fromRGB(0, 255, 220),
-
-    ElementBackground = Color3.fromRGB(18, 28, 70),
-    ElementBackgroundHover = Color3.fromRGB(25, 40, 90),
-    SecondaryElementBackground = Color3.fromRGB(15, 25, 65),
-    ElementStroke = Color3.fromRGB(0, 180, 255),
-    SecondaryElementStroke = Color3.fromRGB(0, 150, 220),
-
-    SliderBackground = Color3.fromRGB(25, 35, 80),
-    SliderProgress = Color3.fromRGB(180, 80, 255),
-    SliderStroke = Color3.fromRGB(200, 100, 255),
-
-    ToggleBackground = Color3.fromRGB(20, 30, 75),
-    ToggleEnabled = Color3.fromRGB(255, 80, 80),
-    ToggleDisabled = Color3.fromRGB(60, 60, 80),
-    ToggleEnabledStroke = Color3.fromRGB(255, 120, 120),
-    ToggleDisabledStroke = Color3.fromRGB(80, 80, 100),
-    ToggleEnabledOuterStroke = Color3.fromRGB(255, 150, 150),
-    ToggleDisabledOuterStroke = Color3.fromRGB(100, 100, 120),
-
-    DropdownSelected = Color3.fromRGB(25, 40, 90),
-    DropdownUnselected = Color3.fromRGB(18, 28, 70),
-
-    InputBackground = Color3.fromRGB(20, 30, 75),
-    InputStroke = Color3.fromRGB(0, 200, 255),
-    PlaceholderColor = Color3.fromRGB(120, 140, 180)
-},
 	}
 }
 
@@ -1773,17 +1729,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 	local Passthrough = false
 	Topbar.Title.Text = Settings.Name
-	-- Título CPO 3.0 em vermelho neon
-Topbar.Title.TextColor3 = Color3.fromRGB(255, 60, 60)
-
--- Gradient background para efeito neon
-local mainGradient = Instance.new("UIGradient")
-mainGradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(12, 18, 50)),
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(8, 12, 35))
-})
-mainGradient.Rotation = 90
-mainGradient.Parent = Main
 
 	Main.Size = UDim2.new(0, 420, 0, 100)
 	Main.Visible = true
