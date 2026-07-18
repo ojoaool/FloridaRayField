@@ -326,7 +326,7 @@ local RayfieldLibrary = {
 			TextColor = Color3.fromRGB(240, 240, 240),
 
 			Background = Color3.fromRGB(25, 25, 25),
-			Topbar = Color3.fromRGB(34, 34, 34),
+			Topbar = Color3.fromRGB(45, 20, 65),
 			Shadow = Color3.fromRGB(20, 20, 20),
 
 			NotificationBackground = Color3.fromRGB(20, 20, 20),
@@ -1752,10 +1752,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 	if Settings.Icon and Settings.Icon ~= 0 and Topbar:FindFirstChild('Icon') then
 		Topbar.Icon.Visible = true
-		Topbar.Title.TextScaled = false
-Topbar.Title.TextSize = 8  -- ou 16, ajuste ao seu gosto
-Topbar.Title.Position = UDim2.new(0.5, 0, 0.5, 0)
-Topbar.Title.AnchorPoint = Vector2.new(0.5, 0.5)
+		Topbar.Title.Position = UDim2.new(0, 47, 0.5, 0)
 
 		if Settings.Icon then
 			local img, rectOffset, rectSize = resolveIcon(Settings.Icon)
