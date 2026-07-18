@@ -1752,8 +1752,12 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 	if Settings.Icon and Settings.Icon ~= 0 and Topbar:FindFirstChild('Icon') then
 		Topbar.Icon.Visible = true
-		Topbar.Title.Position = UDim2.new(0,5, 0, 0.5, 0)
-		Topbar.Title.AnchorPoint = Vector2.new(0.5, 0.5)
+		-- 1. Logo após a linha: Topbar.Title.Text = Settings.Name (por volta da 1730)
+Topbar.Title.AnchorPoint = Vector2.new(0, 0.5) -- Mantemos o padrão para evitar bugs de deslocamento
+Topbar.Title.Position = UDim2.new(0, 45, 0.5, 0) -- Posição inicial segura
+Topbar.Title.Size = UDim2.new(1, -90, 1, 0) -- Faz a caixa ocupar a largura total menos os botões
+Topbar.Title.TextXAlignment = Enum.TextXAlignment.Center -- O segredo está aqui: centraliza o TEXTO dentro da caixa
+
 
 		if Settings.Icon then
 			local img, rectOffset, rectSize = resolveIcon(Settings.Icon)
