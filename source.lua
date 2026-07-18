@@ -325,9 +325,9 @@ local RayfieldLibrary = {
 		Default = {
 			TextColor = Color3.fromRGB(240, 240, 240),
 
-			Background = Color3.fromRGB(26, 115, 232),
-			Topbar = Color3.fromRGB(26, 115, 232),
-			Shadow = Color3.fromRGB(0, 191, 255, 0.35),
+			Background = Color3.fromRGB(25, 25, 25),
+			Topbar = Color3.fromRGB(34, 34, 34),
+			Shadow = Color3.fromRGB(20, 20, 20),
 
 			NotificationBackground = Color3.fromRGB(20, 20, 20),
 			NotificationActionsBackground = Color3.fromRGB(230, 230, 230),
@@ -698,6 +698,51 @@ local RayfieldLibrary = {
 			InputStroke = Color3.fromRGB(180, 190, 200),
 			PlaceholderColor = Color3.fromRGB(150, 150, 150)
 		},
+
+		-- ═══════════════════════════════════════════════════
+-- TEMA CPO 3.0 NEON - Adicione isso na tabela Theme
+-- ═══════════════════════════════════════════════════
+CPO3 = {
+    TextColor = Color3.fromRGB(240, 245, 255),
+
+    Background = Color3.fromRGB(12, 18, 50),
+    Topbar = Color3.fromRGB(8, 14, 40),
+    Shadow = Color3.fromRGB(5, 10, 30),
+
+    NotificationBackground = Color3.fromRGB(15, 22, 60),
+    NotificationActionsBackground = Color3.fromRGB(25, 35, 80),
+
+    TabBackground = Color3.fromRGB(20, 30, 80),
+    TabStroke = Color3.fromRGB(0, 200, 255),
+    TabBackgroundSelected = Color3.fromRGB(30, 50, 120),
+    TabTextColor = Color3.fromRGB(180, 200, 255),
+    SelectedTabTextColor = Color3.fromRGB(0, 255, 220),
+
+    ElementBackground = Color3.fromRGB(18, 28, 70),
+    ElementBackgroundHover = Color3.fromRGB(25, 40, 90),
+    SecondaryElementBackground = Color3.fromRGB(15, 25, 65),
+    ElementStroke = Color3.fromRGB(0, 180, 255),
+    SecondaryElementStroke = Color3.fromRGB(0, 150, 220),
+
+    SliderBackground = Color3.fromRGB(25, 35, 80),
+    SliderProgress = Color3.fromRGB(180, 80, 255),
+    SliderStroke = Color3.fromRGB(200, 100, 255),
+
+    ToggleBackground = Color3.fromRGB(20, 30, 75),
+    ToggleEnabled = Color3.fromRGB(255, 80, 80),
+    ToggleDisabled = Color3.fromRGB(60, 60, 80),
+    ToggleEnabledStroke = Color3.fromRGB(255, 120, 120),
+    ToggleDisabledStroke = Color3.fromRGB(80, 80, 100),
+    ToggleEnabledOuterStroke = Color3.fromRGB(255, 150, 150),
+    ToggleDisabledOuterStroke = Color3.fromRGB(100, 100, 120),
+
+    DropdownSelected = Color3.fromRGB(25, 40, 90),
+    DropdownUnselected = Color3.fromRGB(18, 28, 70),
+
+    InputBackground = Color3.fromRGB(20, 30, 75),
+    InputStroke = Color3.fromRGB(0, 200, 255),
+    PlaceholderColor = Color3.fromRGB(120, 140, 180)
+},
 	}
 }
 
@@ -1728,6 +1773,17 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 	local Passthrough = false
 	Topbar.Title.Text = Settings.Name
+	-- Título CPO 3.0 em vermelho neon
+Topbar.Title.TextColor3 = Color3.fromRGB(255, 60, 60)
+
+-- Gradient background para efeito neon
+local mainGradient = Instance.new("UIGradient")
+mainGradient.Color = ColorSequence.new({
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(12, 18, 50)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(8, 12, 35))
+})
+mainGradient.Rotation = 90
+mainGradient.Parent = Main
 
 	Main.Size = UDim2.new(0, 420, 0, 100)
 	Main.Visible = true
