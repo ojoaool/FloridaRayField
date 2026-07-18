@@ -1753,7 +1753,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 	if Settings.Icon and Settings.Icon ~= 0 and Topbar:FindFirstChild('Icon') then
 		Topbar.Icon.Visible = true
 		Topbar.Title.TextScaled = false
-Topbar.Title.TextSize = 14  -- ou 16, ajuste ao seu gosto
+Topbar.Title.TextSize = 8  -- ou 16, ajuste ao seu gosto
 Topbar.Title.Position = UDim2.new(0.5, 0, 0.5, 0)
 Topbar.Title.AnchorPoint = Vector2.new(0.5, 0.5)
 
