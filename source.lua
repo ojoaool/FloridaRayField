@@ -1728,6 +1728,10 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 	local Passthrough = false
 	Topbar.Title.Text = Settings.Name
+	Topbar.Title.TextXAlignment = Enum.TextXAlignment.Center
+	Topbar.Title.AnchorPoint = Vector2.new(0.5, 0.5)
+	Topbar.Title.Position = UDim2.new(0.5, 0, 0.5, 0)
+	Topbar.Title.Size = UDim2.new(1, -100, 0, 20)
 
 	Main.Size = UDim2.new(0, 420, 0, 100)
 	Main.Visible = true
