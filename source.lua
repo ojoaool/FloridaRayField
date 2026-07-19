@@ -1728,10 +1728,15 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 	local Passthrough = false
 	Topbar.Title.Text = Settings.Name
+
+	local hasIcon = Settings.Icon and Settings.Icon ~= 0
+	local iconZoneWidth = hasIcon and 40 or 0 -- espaço que o ícone ocupa na esquerda
+	local buttonsZoneWidth = 100 -- espaço dos botões na direita
+
 	Topbar.Title.TextXAlignment = Enum.TextXAlignment.Center
 	Topbar.Title.AnchorPoint = Vector2.new(0.5, 0.5)
-	Topbar.Title.Position = UDim2.new(0.5, 0, 0.5, 0)
-	Topbar.Title.Size = UDim2.new(1, -100, 0, 20)
+	Topbar.Title.Position = UDim2.new(0.5, (iconZoneWidth - buttonsZoneWidth) / -2, 0.5, 0)
+	Topbar.Title.Size = UDim2.new(1, -(iconZoneWidth + buttonsZoneWidth), 0, 20)
 
 	Main.Size = UDim2.new(0, 420, 0, 100)
 	Main.Visible = true
