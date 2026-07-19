@@ -3236,6 +3236,29 @@ function RayfieldLibrary:CreateWindow(Settings)
 			Toggle.Visible = true
 			Toggle.Parent = TabPage
 
+			if ToggleSettings.Icon and ToggleSettings.Icon ~= 0 then
+				local img, rectOffset, rectSize = resolveIcon(ToggleSettings.Icon)
+				local IconLabel = Instance.new('ImageLabel')
+				IconLabel.Name = 'Icon'
+				IconLabel.BackgroundTransparency = 1
+				IconLabel.Size = UDim2.new(0, 16, 0, 16)
+				IconLabel.AnchorPoint = Vector2.new(0, 0.5)
+				IconLabel.Position = UDim2.new(0, 12, 0.5, 0)
+				IconLabel.Image = img
+				if rectOffset then IconLabel.ImageRectOffset = rectOffset end
+				if rectSize then IconLabel.ImageRectSize = rectSize end
+				IconLabel.ImageColor3 = SelectedTheme.TextColor
+				IconLabel.ImageTransparency = 1
+				IconLabel.ZIndex = 2
+				IconLabel.Parent = Toggle
+
+				TweenService:Create(IconLabel, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {ImageTransparency = 0}):Play()
+
+				Toggle.Title.Position = UDim2.new(0, 38, 0.5, 0)
+			end
+
+			
+
 			Toggle.BackgroundTransparency = 1
 			Toggle.UIStroke.Transparency = 1
 			Toggle.Title.TextTransparency = 1
@@ -3376,6 +3399,10 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 			Rayfield.Main:GetPropertyChangedSignal('BackgroundColor3'):Connect(function()
 				Toggle.Switch.BackgroundColor3 = SelectedTheme.ToggleBackground
+
+				if Toggle:FindFirstChild('Icon') then
+					Toggle.Icon.ImageColor3 = SelectedTheme.TextColor
+				end
 
 				if SelectedTheme ~= RayfieldLibrary.Theme.Default then
 					Toggle.Switch.Shadow.Visible = false
