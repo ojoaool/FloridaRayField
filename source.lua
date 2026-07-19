@@ -2071,6 +2071,11 @@ function RayfieldLibrary:CreateWindow(Settings)
 		TabButton.Name = Name
 		TabButton.Title.Text = Name
 		TabButton.Parent = TabList
+
+		local tabCorner = TabButton:FindFirstChildOfClass("UICorner")
+		if tabCorner then
+			tabCorner.CornerRadius = UDim.new(1, 0)
+		end
 		TabButton.Title.TextWrapped = false
 		TabButton.Size = UDim2.new(0, TabButton.Title.TextBounds.X + 30, 0, 30)
 
